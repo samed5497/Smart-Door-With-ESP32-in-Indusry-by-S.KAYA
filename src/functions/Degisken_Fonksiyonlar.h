@@ -244,7 +244,7 @@ void Kapi_Fonksiyonlari() // Kapı açma fonk calısırken
 
                 Buzzer_Ton();
 
-                if (digitalRead(IN_3_Cisim_39) == HIGH)
+                if (digitalRead(IN_3_Cisim_39) == HIGH) // KAPI LOJIK DEGİSİMİ (HIGH- LOW)
                 {
                     Manuel_KOMUT = 1;
                     RF_KOMUT = 1;
@@ -368,7 +368,7 @@ void Kapi_Fonksiyonlari() // Kapı açma fonk calısırken
     {
         digitalWrite(ROLE_2_Buzzer, LOW);
     }
-
+/*
     if (Kapi_Durum == 3 and (digitalRead(IN_1_SW_MIN_35) == HIGH and digitalRead(IN_2_SW_MAX_34) == HIGH))
     {
         Kapi_Komut = 2;
@@ -378,6 +378,7 @@ void Kapi_Fonksiyonlari() // Kapı açma fonk calısırken
     {
         Kapi_Komut = 1;
     }
+    */
 }
 
 void RF_Kontrol() // RF'ten gelen sinyalleri kontrol eder.
@@ -400,6 +401,7 @@ void RF_Kontrol() // RF'ten gelen sinyalleri kontrol eder.
         {
             Kapi_Komut = 2;
         }
+        
     }
 }
 
@@ -435,7 +437,7 @@ void Oto_Kontrol_Algoritmasi()
     {
         if (Kapi_Durum == 6)
         {
-            if (digitalRead(IN_3_Cisim_39) == HIGH)
+                if (digitalRead(IN_3_Cisim_39) == HIGH) // KAPI LOJIK DEGİSİMİ (HIGH- LOW)
             {
                 if (Oto_Algoritma_Sayac <= Kapi_Oto_Kapanma_Sure * 60)
                 {
@@ -465,7 +467,7 @@ void Oto_Kontrol_Algoritmasi()
 
         else if (Kapi_Durum == 5 or Kapi_Durum == 2)
         {
-            if (digitalRead(IN_3_Cisim_39) == HIGH)
+                if (digitalRead(IN_3_Cisim_39) == HIGH) // KAPI LOJIK DEGİSİMİ (HIGH- LOW)
             {
                 if (Oto_Algoritma_Sayac <= Kapi_Oto_Kapanma_Sure * 30)
                 {

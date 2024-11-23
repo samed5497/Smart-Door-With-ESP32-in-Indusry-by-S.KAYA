@@ -22,7 +22,7 @@
     -
 
 
-****v0.4
+****v0.4    
 
     - Otomatik kapanma algoritması ilk versiyon eklendi. 
     - Main page html bir tık daha düzenlendi. 

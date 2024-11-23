@@ -87,7 +87,7 @@ String generateMainPageForm()
                             // OtoMod durumunun değişmesini takip eden fonksiyon
                             "function changeOtoMod() {var otoModSwitch = document.getElementById('otoModSwitch'); var isChecked = otoModSwitch.checked;" +
                             "if (isChecked) {ws.send('OtoModOn');} " +
-                            "else { ws.send('OtoModOff');}}" +
+                            "else{ws.send('OtoModOff');}}" +
 
                             // "function checkFile() {" +
                             // "   const fileInput = document.getElementById('fileInput');" +
@@ -146,17 +146,17 @@ String generateMainPageForm()
                             "</script>";
 
     String MainPagecss = String("<style>") +
-                         "body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; }" +
-                         "h1 { color: #333; }" +
-                         "button { padding: 10px 20px; font-size: 16px; margin: 5px; border-radius: 5px; border: none; cursor: pointer; }" +
-                         "button.button-open { background-color: #4CAF50; color: white; }" +  // Kapıyı Aç butonu (yeşil)
-                         "button.button-close { background-color: #f44336; color: white; }" + // Kapıyı Kapat butonu (kırmızı)
-                         "button:hover { background-color: #777; }" +
-                         ".form-container { max-width: 750px; margin: 0 auto; padding: 20px; background: rgba(255, 255, 255, 0.8); border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }" +
-                         ".popup { display: none; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 9999; background-color: rgba(255, 255, 255, 0.9); border: 1px solid #ccc; border-radius: 5px; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }" +
-                         ".popup form label { display: inline-block; width: 80px; }" +                                         // Ayarlarınızı yapabilirsiniz
-                         ".popup form input[type='text'], .popup form input[type='password'] { width: calc(100% - 100px); }" + // inputların boyutu
-                         ".close { position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 24px; }" +
+                         "body{font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; }" +
+                         "h1{color: #333; }" +
+                         "button{padding: 10px 20px; font-size: 16px; margin: 5px; border-radius: 5px; border: none; cursor: pointer; }" +
+                         "button.button-open{background-color: #4CAF50; color: white; }" +  // Kapıyı Aç butonu (yeşil)
+                         "button.button-close{background-color: #f44336; color: white; }" + // Kapıyı Kapat butonu (kırmızı)
+                         "button:hover{background-color: #777; }" +
+                         ".form-container{max-width: 750px; margin: 0 auto; padding: 20px; background: rgba(255, 255, 255, 0.8); border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }" +
+                         ".popup{display: none; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 9999; background-color: rgba(255, 255, 255, 0.9); border: 1px solid #ccc; border-radius: 5px; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }" +
+                         ".popup form label{display: inline-block; width: 80px; }" +                                         // Ayarlarınızı yapabilirsiniz
+                         ".popup form input[type='text'], .popup form input[type='password']{width: calc(100% - 100px); }" + // inputların boyutu
+                         ".close{position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 24px; }" +
                          ".switch {position: relative; display: inline-block; width: 60px; height: 34px;}" +
                          ".switch input {display: none;}" +
                          ".slider {position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px;}" +
@@ -260,10 +260,10 @@ String generateFirstPageForm()
     String FirstPageScript = String("<script> </script>");
 
     String FirstPagecss = String("<style>") +
-                          "body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }" +
-                          "h1 { color: #333; } p { color: #555; }" +
-                          ".settings-btn { background-color: #4caf50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }" +
-                          ".content { max-width: 400px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }" +
+                          "body{font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }" +
+                          "h1{color: #333;}p{color: #555; }" +
+                          ".settings-btn{background-color: #4caf50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }" +
+                          ".content{max-width: 400px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }" +
                           "</style>";
 
     String FirstPagehtml = "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>" + UYGULAMA + " Wi-Fi Yapılandırma</title>" +
@@ -280,13 +280,13 @@ String generateSettingsForm()
 {
 
     String SettingsPageScript = String("<style>") +
-                                "body { font-family: Arial, sans-serif; background-color: #f4f4f4; }" +
-                                "h1 { color: #333; text-align: center; }" +
-                                "form { margin: 0 auto; max-width: 400px; padding: 20px; background: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); position: relative; }" +
-                                "label { display: block; margin-bottom: 5px; }" +
-                                "input[type='password'], input[type='text'], select { width: calc(100% - 12px); padding: 5px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; }" +
-                                ".toggle-password { position: absolute; top: 50%; right: 5px; transform: translateY(-50%); width: 20px; height: 20px; background: #ccc; border: none; cursor: pointer; padding: 0; }" +
-                                "input[type='submit'] { background-color: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer; display: block; margin: 0 auto; }" +
+                                "body{font-family: Arial, sans-serif; background-color: #f4f4f4; }" +
+                                "h1{color: #333; text-align: center; }" +
+                                "form{margin: 0 auto; max-width: 400px; padding: 20px; background: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); position: relative; }" +
+                                "label{display: block; margin-bottom: 5px; }" +
+                                "input[type='password'], input[type='text'], select{width: calc(100% - 12px); padding: 5px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; }" +
+                                ".toggle-password{position: absolute; top: 50%; right: 5px; transform: translateY(-50%); width: 20px; height: 20px; background: #ccc; border: none; cursor: pointer; padding: 0; }" +
+                                "input[type='submit']{background-color: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer; display: block; margin: 0 auto; }" +
                                 "</style>";
 
     String SettingsPagecss = String("<script>") +
@@ -319,13 +319,13 @@ String generateSettingsForm()
 String generateSettingsFinishForm()
 {
     String SettingsPageScript = String("<style>") +
-                                "body { font-family: Arial, sans-serif; background-color: #f4f4f4; }" +
-                                "h1 { color: #333; text-align: center; }" +
-                                "form { margin: 0 auto; max-width: 400px; padding: 20px; background: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); position: relative; }" +
-                                "label { display: block; margin-bottom: 5px; }" +
-                                "input[type='password'], input[type='text'], select { width: calc(100% - 12px); padding: 5px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; }" +
-                                ".toggle-password { position: absolute; top: 50%; right: 5px; transform: translateY(-50%); width: 20px; height: 20px; background: #ccc; border: none; cursor: pointer; padding: 0; }" +
-                                "input[type='submit'] { background-color: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer; display: block; margin: 0 auto; }" +
+                                "body{font-family: Arial, sans-serif; background-color: #f4f4f4; }" +
+                                "h1{color: #333; text-align: center; }" +
+                                "form{margin: 0 auto; max-width: 400px; padding: 20px; background: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); position: relative; }" +
+                                "label{display: block; margin-bottom: 5px; }" +
+                                "input[type='password'], input[type='text'], select{width: calc(100% - 12px); padding: 5px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; }" +
+                                ".toggle-password{position: absolute; top: 50%; right: 5px; transform: translateY(-50%); width: 20px; height: 20px; background: #ccc; border: none; cursor: pointer; padding: 0; }" +
+                                "input[type='submit']{background-color: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer; display: block; margin: 0 auto; }" +
                                 "</style>";
 
     String SettingsPagecss = String("<script>") +
@@ -357,14 +357,14 @@ String generateResetForm()
     String ResetPageScript = String("<script> </script>");
 
     String ResetPagecss = String("<style>") +
-                          "body { font-family: Arial, sans-serif; background-color: #f4f4f4; }" +
-                          "body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; }" +
-                          "h1 { color: #333; } p { color: #555; }" +
-                          ".content { max-width: 400px; margin: 0 auto; background: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; }" +
-                          "label { display: block; margin-bottom: 5px; }" +
-                          "input[type='text'] { width: calc(100% - 12px); padding: 5px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; }" +
-                          ".submit-button { background-color: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer; }" +
-                          ".button { padding: 10px 20px; font-size: 18px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }" +
+                          "body{font-family: Arial, sans-serif; background-color: #f4f4f4; }" +
+                          "body{font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; }" +
+                          "h1{color: #333;}p{color: #555; }" +
+                          ".content{max-width: 400px; margin: 0 auto; background: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px; }" +
+                          "label{display: block; margin-bottom: 5px; }" +
+                          "input[type='text']{width: calc(100% - 12px); padding: 5px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; }" +
+                          ".submit-button{background-color: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer; }" +
+                          ".button{padding: 10px 20px; font-size: 18px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }" +
                           "</style>";
 
     String ResetPagehtml = String("<!DOCTYPE html<html><head><meta charset='UTF-8'><title>" + UYGULAMA + " Fabrika Ayarları</title>") +
@@ -384,9 +384,9 @@ String generateUpdateFailForm(String errorCode)
     String UpdateFailPageScript = String("<script> </script>");
 
     String UpdateFailPagecss = String("<style>") +
-                               "body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }" +
-                               ".fail-msg { color: red; font-size: 24px; }" +
-                               ".button { padding: 10px 20px; font-size: 18px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }" +
+                               "body{font-family: Arial, sans-serif; text-align: center; margin-top: 50px;}" +
+                               ".fail-msg{color: red; font-size: 24px;}" +
+                               ".button{padding: 10px 20px; font-size: 18px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer; text-decoration: none;}" +
                                "</style>";
 
     String UpdateFailPagehtml = String("<!DOCTYPE html<html><head><meta charset='UTF-8'><title>" + UYGULAMA + " Güncelleme Başarısız</title>") +
@@ -405,9 +405,9 @@ String generateUpdateSuccessForm()
     String UpdateSuccessPageScript = String("<script> </script>");
 
     String UpdateSuccessPagecss = String("<style>") +
-                                  "body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-image: url('arka_plan_resmi.png'); background-size: cover; }" +
-                                  ".success-msg { color: green; font-size: 24px; }" +
-                                  ".button { padding: 10px 20px; font-size: 18px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }" +
+                                  "body{font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-image: url('arka_plan_resmi.png'); background-size: cover; }" +
+                                  ".success-msg{color: green; font-size: 24px; }" +
+                                  ".button{padding: 10px 20px; font-size: 18px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }" +
                                   "</style>";
 
     String UpdateSuccessPagehtml = String("<!DOCTYPE html<html><head><meta charset='UTF-8'><title>" + UYGULAMA + " Güncelleme Başarılı</title>") +
@@ -424,7 +424,7 @@ String generateUpdateInProgressForm()
     String UpdateInProgressPageScript = String("<script> </script>");
 
     String UpdateInProgressPagecss = String("<style>") +
-                                     "body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }" +
+                                     "body{font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }" +
                                      "</style>";
 
     String UpdateInProgressPagehtml = String("<!DOCTYPE html><html><head><meta charset='UTF-8'><title>" + UYGULAMA + " Güncelleme İlerliyor</title>" +
